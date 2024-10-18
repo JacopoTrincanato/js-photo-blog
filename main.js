@@ -61,13 +61,17 @@ const albumsRowEl = response.data;
 console.log(albumsRowEl);
 
 //ciclo per trasformare la prima lettera di ogni parola in una 
+
+
 albums.forEach((album)=>{
     let capitalizedString = (str)=> str[0].toUpperCase() + str.slice(1).toLowerCase();
     let words = album.title.split(' ').map(capitalizedString)
-    let capitalizedTitle = words.join(' ')
+    let capitalizedTitle = words.join(' ') 
+    album.title = capitalizedTitle
+    console.log(album.title);
     
-    console.log(capitalizedTitle);
 })
+
 
 
 //ciclo all'interno di albumsEl
