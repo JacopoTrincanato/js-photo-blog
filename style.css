@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-image: url('./img/wall.png');
+}
+
+h1{
+    padding: 1rem;
+    font-size: 4rem;
+    text-align: center;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+}
