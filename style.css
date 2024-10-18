@@ -21,27 +21,47 @@ h1{
 
 main{
     font-family: "Sometype Mono", monospace;
-
+    background-image: url('./img/cork.png');
+    
     .container{
         max-width: 900px;
+        margin: auto;
 
         .row{
             display: flex;
             flex-wrap: wrap;
+            margin: 0 -1rem;
         }
     }
 }
 
 .col-lg-4 {
     width: calc((100% / 12) * 4);
+    padding: 0.5rem;
 }
 
 .album{
-    border: 1px solid;
+    position: relative;
+    background-color: white;
+
+    .circle img{
+        position: absolute;
+        top: -1rem;
+        left: 45%;
+    }
 }
 
 .album-img img{
-    width: 400px;
-    height: 400px;
+    
+    height: 305px;
     padding: 1rem;
+}
+
+.album-description{
+    padding: 1rem;
+}
+
+.my-4{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
