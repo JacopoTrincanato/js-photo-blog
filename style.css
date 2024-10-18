@@ -43,7 +43,7 @@ main{
 .album{
     position: relative;
     background-color: white;
-    min-height: 400px;
+    min-height: 360px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.388);
 
     .circle img{
@@ -56,7 +56,7 @@ main{
 
 .album:hover{
     rotate: 15deg;
-    scale: 1.1;
+    scale: 1.05;
     z-index: 1000;
     .circle img{
         display: none;
@@ -64,7 +64,6 @@ main{
 }
 
 .album-img img{
-    height: 305px;
     padding: 1rem 1rem 0.5rem 1rem;
 }
 
