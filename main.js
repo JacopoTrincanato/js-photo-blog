@@ -49,9 +49,21 @@ const albums= [
     }
 ]
 
+//richiamo l'elemento row
+const albumsRow = document.querySelector('.row');
+
 //effettuo una chiamata AJAX
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
 .then(response =>{
 console.log(response);
 
-}).catch()
+const albumsRowEl = response.data
+console.log(albumsRowEl);
+
+//ciclo all'interno di albumsEl
+
+
+
+
+//aggiungo un messaggio di errore
+}).catch(err => console.error(err))
