@@ -84,22 +84,29 @@ main{
     padding: 0 1rem 0 1rem;
 }
 
-/* breackpoint m minore di 800px */
-@media screen and (max-width: 800px) {
+/* breackpoint m minore di 700px */
+@media screen and (max-width: 700px) {
 
     .col-md-6 {
         width: calc((100% / 12) * 6);
-        padding: 0.75rem;
+
     }
 
+    .album-md{
+        width: 90%;
+        margin: auto;
+    }
 }
 
 
-/* breackpoint m minore di 400px */
-@media screen and (max-width: 400px) {
+/* breackpoint m minore di 580px */
+@media screen and (max-width: 580px) {
     .col-sm-12 {
         width: 100%;
-        padding: 0.75rem;
     }
     
+    .album-sm{
+        width: 80%;
+        margin: auto;
+    }
 }

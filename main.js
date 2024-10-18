@@ -33,7 +33,7 @@ albumsRowEl.forEach(album => {
     //creo il markup da inserire dentro row
     const markup = `
     <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="album">
+        <div class="album album-md album-sm">
             <div class="circle">
                 <img src="./img/pin.svg" alt="">
                 </div>
