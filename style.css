@@ -13,7 +13,7 @@ img{
 }
 
 h1{
-    padding: 1rem;
+    padding: 1.5rem;
     font-size: 4rem;
     text-align: center;
     font-family: "Edu TAS Beginner", serif;
@@ -55,7 +55,11 @@ main{
 }
 
 .album:hover{
-    rotate: 30deg;
+    rotate: 15deg;
+    scale: 1.1;
+    .circle img{
+        display: none;
+    }
 }
 
 .album-img img{
