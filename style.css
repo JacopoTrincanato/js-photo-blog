@@ -8,6 +8,10 @@ header{
     background-image: url('./img/wall.png');
 }
 
+img{
+    max-width: 100%;
+}
+
 h1{
     padding: 1rem;
     font-size: 4rem;
@@ -17,4 +21,13 @@ h1{
 
 main{
     font-family: "Sometype Mono", monospace;
+
+    .container{
+        max-width: 900px;
+    }
+}
+
+.card img{
+    width: 200px;
+    height: 200px;
 }
