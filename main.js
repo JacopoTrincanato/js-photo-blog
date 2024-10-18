@@ -61,14 +61,32 @@ const albumsRowEl = response.data;
 console.log(albumsRowEl);
 
 //ciclo all'interno di albumsEl
-let albumsElement = '';
 
 albumsRowEl.forEach(album => {
     //destrutturo
-    const {title, url, thumbnailUrl} = album;
+    const {title, url} = album;
+
+    //creo il markup da inserire dentro row
+    const markup = `
+    <div class=" my-4 col-lg-4 col-md-6 col-sm-12">
+        <div class="album">
+            <div class="circle">
+                <img src="./img/pin.svg" alt="">
+                </div>
+                <div class="album-img">
+                    <img src="${url}" alt="">
+                    
+                </div>
+            <div class="album-description">
+                <p>${title}</p>
+            </div>
+        </div>
+    </div>
+    `
+
+    //inserisco il markup nell'HTML
+    albumsRow.innerHTML += markup
 });
-
-
 
 //aggiungo un messaggio di errore
 }).catch(err => console.error(err));
