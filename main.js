@@ -48,3 +48,10 @@ const albums= [
         "thumbnailUrl": "https://via.placeholder.com/150/56a8c2"
     }
 ]
+
+//effettuo una chiamata AJAX
+axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
+.then(response =>{
+console.log(response);
+
+}).catch()
