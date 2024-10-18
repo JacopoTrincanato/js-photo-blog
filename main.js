@@ -62,10 +62,11 @@ console.log(albumsRowEl);
 
 //ciclo per trasformare la prima lettera di ogni parola in una 
 albums.forEach((album)=>{
-    let firstLetter = album.title.charAt(0).toUpperCase();
-    let restOfString = album.title.slice(1).toLowerCase();
+    let capitalizedString = (str)=> str[0].toUpperCase() + str.slice(1).toLowerCase();
+    let words = album.title.split(' ').map(capitalizedString)
+    let capitalizedTitle = words.join(' ')
     
-    console.log(firstLetter + restOfString);
+    console.log(capitalizedTitle);
 })
 
 
@@ -73,7 +74,7 @@ albums.forEach((album)=>{
 
 albumsRowEl.forEach(album => {
     //destrutturo
-    const {newTitle, url} = album;
+    const {title, url} = album;
 
     //creo il markup da inserire dentro row
     const markup = `
@@ -87,7 +88,7 @@ albumsRowEl.forEach(album => {
                     
                 </div>
             <div class="album-description">
-                <p>${newTitle}</p>
+                <p>${title}</p>
             </div>
         </div>
     </div>
