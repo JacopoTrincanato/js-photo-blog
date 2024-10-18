@@ -46,13 +46,17 @@ main{
 
     .circle img{
         position: absolute;
-        top: -1rem;
+        top: -0.5rem;
         left: 45%;
+        height: 30px;
     }
 }
 
+.album:hover{
+    rotate: 30deg;
+}
+
 .album-img img{
-    
     height: 305px;
     padding: 1rem;
 }
