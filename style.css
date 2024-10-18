@@ -24,10 +24,24 @@ main{
 
     .container{
         max-width: 900px;
+
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
 }
 
-.card img{
-    width: 200px;
-    height: 200px;
+.col-lg-4 {
+    width: calc((100% / 12) * 4);
+}
+
+.album{
+    border: 1px solid;
+}
+
+.album-img img{
+    width: 400px;
+    height: 400px;
+    padding: 1rem;
 }
