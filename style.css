@@ -58,11 +58,13 @@ main{
 
 .album-img img{
     height: 305px;
-    padding: 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
 }
 
 .album-description{
-    padding: 1rem;
+    padding: 0 1rem 2rem 1rem;
+    font-style: italic;
+    font-size: 0.8rem;
 }
 
 .mt-4{
