@@ -57,13 +57,18 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
 .then(response =>{
 console.log(response);
 
-const albumsRowEl = response.data
+const albumsRowEl = response.data;
 console.log(albumsRowEl);
 
 //ciclo all'interno di albumsEl
+let albumsElement = '';
 
+albumsRowEl.forEach(album => {
+    //destrutturo
+    const {title, url, thumbnailUrl} = album;
+});
 
 
 
 //aggiungo un messaggio di errore
-}).catch(err => console.error(err))
+}).catch(err => console.error(err));
