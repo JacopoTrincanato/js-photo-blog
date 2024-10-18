@@ -60,11 +60,6 @@ console.log(response);
 const albumsRowEl = response.data;
 console.log(albumsRowEl);
 
-//ciclo per trasformare la prima lettera di ogni parola in una 
-
-
-
-
 //ciclo all'interno di albumsEl
 
 albumsRowEl.forEach(album => {
