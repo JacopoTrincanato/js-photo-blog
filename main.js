@@ -60,6 +60,20 @@ console.log(response);
 const albumsRowEl = response.data;
 console.log(albumsRowEl);
 
+//ciclo per trasformare la prima lettera di ogni parola in una 
+for (let i = 0; i < albums.length; i++) {
+    const element = albums[i];
+    let newTitle = element.title
+    let arrTitle = newTitle.split(',')
+    
+    let firstLetter = arrTitle.charAt(0).toUpperCase;
+    let restOfString = arrTitle.slice(1).toLowerCase;
+    arrTitle.push(firstLetter + restOfString);
+    console.log(arrTitle.join());
+    
+
+}
+
 //ciclo all'interno di albumsEl
 
 albumsRowEl.forEach(album => {
