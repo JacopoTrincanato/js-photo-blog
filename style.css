@@ -83,3 +83,23 @@ main{
 .album-description{
     padding: 0 1rem 0 1rem;
 }
+
+/* breackpoint m minore di 800px */
+@media screen and (max-width: 800px) {
+
+    .col-md-6 {
+        width: calc((100% / 12) * 6);
+        padding: 0.75rem;
+    }
+
+}
+
+
+/* breackpoint m minore di 400px */
+@media screen and (max-width: 400px) {
+    .col-sm-12 {
+        width: 100%;
+        padding: 0.75rem;
+    }
+    
+}
