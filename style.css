@@ -20,7 +20,7 @@ h1{
 }
 
 main{
-    font-family: "Sometype Mono", monospace;
+    font-family: "Edu TAS Beginner", serif;
     background-image: url('./img/cork.png');
     
     .container{
@@ -43,6 +43,8 @@ main{
 .album{
     position: relative;
     background-color: white;
+    min-height: 400px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.388);
 
     .circle img{
         position: absolute;
@@ -62,9 +64,9 @@ main{
 }
 
 .album-description{
-    padding: 0 1rem 2rem 1rem;
+    padding: 0 1rem 0 1rem;
     font-style: italic;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
 }
 
 .mt-4{
