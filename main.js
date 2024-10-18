@@ -63,20 +63,21 @@ console.log(albumsRowEl);
 //ciclo per trasformare la prima lettera di ogni parola in una 
 
 
-albums.forEach((album)=>{
-    let capitalizedString = (str)=> str[0].toUpperCase() + str.slice(1).toLowerCase();
-    let words = album.title.split(' ').map(capitalizedString)
-    let capitalizedTitle = words.join(' ') 
-    album.title = capitalizedTitle
-    console.log(album.title);
-    
-})
-
 
 
 //ciclo all'interno di albumsEl
 
 albumsRowEl.forEach(album => {
+
+    //trasformo la prima lettera di ogni parola in una maiuscola
+    let capitalizedString = (str)=> str[0].toUpperCase() + str.slice(1).toLowerCase();
+    //creo una variabile words dove splitto le stringhe dei vari titoli
+    let words = album.title.split(' ').map(capitalizedString)
+    //ritrasformo gli array in stringhe e li salvo in una variabile
+    let capitalizedTitle = words.join(' ') 
+    album.title = capitalizedTitle
+    console.log(album.title);
+    
     //destrutturo
     const {title, url} = album;
 
@@ -89,7 +90,6 @@ albumsRowEl.forEach(album => {
                 </div>
                 <div class="album-img">
                     <img src="${url}" alt="">
-                    
                 </div>
             <div class="album-description">
                 <p>${title}</p>
