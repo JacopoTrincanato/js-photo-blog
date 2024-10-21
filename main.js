@@ -9,6 +9,9 @@ const albumsRow = document.querySelector('.row');
 //richiamo le immagini
 let images = document.querySelectorAll('img');
 
+//richiamo l'overlay
+const overlay = document.querySelector('.overlay');
+
 //effettuo una chiamata AJAX
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
 .then(response =>{
@@ -52,7 +55,15 @@ albumsRowEl.forEach(album => {
 
     //inserisco il markup nell'HTML
     albumsRow.innerHTML += markup
+
+    overlay.innerHTML = `
+    <img src="${url}" alt="">
+    <button>Close</button>
+    `
+    
 });
+
+
 
 //aggiungo un messaggio di errore
 }).catch(err => console.error(err));
