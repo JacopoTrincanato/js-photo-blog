@@ -70,17 +70,17 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
             element.addEventListener('click', ()=> {
                 element.classList.add('disappear');
                 overlay.classList.remove('disappear');
-                //richiamo il bottone
-                const button = document.querySelector('button');
 
-                //aggiungo un evento al bottone che riaggiunga la classe disappear all'overlay
-                button.addEventListener('click', ()=>{
-                    overlay.classList.add('disappear');
-                    element.classList.remove('disappear');
-                });
-                });
+            });
             
+            //richiamo il bottone
+            const button = document.querySelector('button');
 
+            //aggiungo un evento al bottone che riaggiunga la classe disappear all'overlay
+            button.addEventListener('click', ()=>{
+                overlay.classList.add('disappear');
+                element.classList.remove('disappear');
+            });
 
         }
 
