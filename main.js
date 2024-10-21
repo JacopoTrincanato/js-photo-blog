@@ -72,8 +72,9 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
             
             //inserisco il markup nell'overlay
             overlay.innerHTML = `
+                <button>Chiudi</button>
                 <img src="${bgImage.src}" alt="">
-                <button>Close</button>
+                
             `
             //richiamo il bottone
             const button = document.querySelector('button');
