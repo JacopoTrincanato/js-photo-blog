@@ -53,28 +53,24 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
         //inserisco il markup nell'HTML
         albumsRow.innerHTML += markup 
 
-        //inserisco il markup dell'overlay nell'HTML
-        overlay.innerHTML = `
-        <button>Close</button>
-        `
-        
-        
-
-        
 
     });
 
     //seleziono tutti i div con classe album nella DOM
     let clickedAlbums = document.querySelectorAll('.album');
 
+    //ciclo all'interno degli album
     clickedAlbums.forEach(clickedAlbum =>{
 
+        //seleziono l'immagine da album-img
         let bgImage = clickedAlbum.querySelector('.album-img img');
         
         //aggiungo un evento che faccia ricomparire l'overlay
         clickedAlbum.addEventListener('click', ()=> {
             clickedAlbum.classList.add('disappear');
             overlay.classList.remove('disappear');
+            
+            //inserisco il markup nell'overlay
             overlay.innerHTML = `
                 <img src="${bgImage.src}" alt="">
                 <button>Close</button>
