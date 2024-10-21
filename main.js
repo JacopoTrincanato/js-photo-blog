@@ -55,7 +55,7 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
 
         //inserisco il markup dell'overlay nell'HTML
         overlay.innerHTML = `
-        <img src="${url}" alt="">
+        <img src="" alt="">
         <button>Close</button>
         `
         
@@ -69,7 +69,10 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
             element.addEventListener('click', ()=> {
                 element.classList.add('disappear');
                 overlay.classList.remove('disappear');
-            
+                overlay.innerHTML = `
+                <img src="${url}" alt="">
+                
+                `
             });
             
             //richiamo il bottone
