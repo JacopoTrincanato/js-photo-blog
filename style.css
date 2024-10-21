@@ -100,20 +100,20 @@ main{
 
     img{
         width: 30%;
-        
-        margin: 10rem;
+        margin: auto;
+        position: absolute;
+        top: 10%;
+        left: 35%;
         
     }
 
     button{
-        
         text-align: center;
         padding: 0.25rem 0.5rem;
-        position: absolute;
-        margin-bottom: 1rem;
         cursor: pointer;
-        
-        
+        position: absolute;
+        top: 5%;
+        left: 48%;
     }
 }
 
