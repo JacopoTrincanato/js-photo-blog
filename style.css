@@ -27,6 +27,10 @@ h1{
     padding: 0.75rem;
 }
 
+.disappear{
+    display: none;
+}
+
 /*header region*/
 header{
     background-image: url('./img/wall.png');
