@@ -60,9 +60,17 @@ albumsRowEl.forEach(album => {
     
 });
 
-//aggiungo un evento che faccia ricomparire il layover
+//aggiungo un evento che faccia ricomparire l'overlay
 albumsRow.addEventListener('click', ()=> {
     overlay.classList.remove('disappear');
+})
+
+//richiamo il bottone
+const button = document.querySelector('button');
+
+//aggiungo un evento al bottone che riaggiunga la classe disappear all'overlay
+button.addEventListener('click', ()=>{
+    overlay.classList.add('disappear');
 })
 
 
