@@ -6,6 +6,9 @@ Studiamo bene la risposta e i dati che ci fornisce iniziando a pensare a come po
 //richiamo l'elemento row
 const albumsRow = document.querySelector('.row');
 
+//richiamo le immagini
+let images = document.querySelectorAll('img');
+
 //effettuo una chiamata AJAX
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
 .then(response =>{
