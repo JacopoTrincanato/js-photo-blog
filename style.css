@@ -62,6 +62,7 @@ main{
     background-color: white;
     min-height: 330px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.388);
+    cursor: pointer;
 
     .circle img{
         position: absolute;
