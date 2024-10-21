@@ -6,9 +6,6 @@ Studiamo bene la risposta e i dati che ci fornisce iniziando a pensare a come po
 //richiamo l'elemento row
 const albumsRow = document.querySelector('.row');
 
-//richiamo le immagini
-let images = document.querySelectorAll('img');
-
 //richiamo l'overlay
 const overlay = document.querySelector('.overlay');
 
@@ -62,6 +59,11 @@ albumsRowEl.forEach(album => {
     `
     
 });
+
+//aggiungo un evento che faccia ricomparire il layover
+albumsRow.addEventListener('click', ()=> {
+    overlay.classList.remove('disappear');
+})
 
 
 
