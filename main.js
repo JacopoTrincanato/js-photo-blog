@@ -61,22 +61,22 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
         
         
 
-        let image = albumsRow.querySelectorAll('.album-img img');
+        let image = document.querySelectorAll('.album');
 
         for (let i = 0; i < image.length; i++) {
             const element = image[i];
             
-            
             //aggiungo un evento che faccia ricomparire l'overlay
             element.addEventListener('click', ()=> {
+                element.classList.add('disappear');
                 overlay.classList.remove('disappear');
-                    
                 //richiamo il bottone
                 const button = document.querySelector('button');
 
                 //aggiungo un evento al bottone che riaggiunga la classe disappear all'overlay
                 button.addEventListener('click', ()=>{
                     overlay.classList.add('disappear');
+                    element.classList.remove('disappear');
                 });
                 });
             
