@@ -65,11 +65,11 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
     });
 
     //seleziono tutti i div con classe album nella DOM
-    let clickedAlbums = document.querySelectorAll('.album-img');
+    let clickedAlbums = document.querySelectorAll('.album');
 
     clickedAlbums.forEach(clickedAlbum =>{
 
-        let bgImage = clickedAlbum.querySelector('img');
+        let bgImage = clickedAlbum.querySelector('.album-img img');
         
         //aggiungo un evento che faccia ricomparire l'overlay
         clickedAlbum.addEventListener('click', ()=> {
