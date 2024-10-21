@@ -59,8 +59,7 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
         <button>Close</button>
         `
         
-        
-
+        //seleziono tutti i div con classe album nella DOM
         let image = document.querySelectorAll('.album');
 
         for (let i = 0; i < image.length; i++) {
@@ -70,7 +69,7 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
             element.addEventListener('click', ()=> {
                 element.classList.add('disappear');
                 overlay.classList.remove('disappear');
-
+            
             });
             
             //richiamo il bottone
@@ -85,16 +84,6 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
         }
 
     });
-
-
-
-    
-
-    
-
-
-    
-
 
 //aggiungo un messaggio di errore
 }).catch(err => console.error(err));
