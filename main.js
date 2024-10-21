@@ -65,30 +65,31 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
     });
 
     //seleziono tutti i div con classe album nella DOM
-    let clickedAlbums = document.querySelectorAll('.album');
+    let clickedAlbums = document.querySelectorAll('.album-img');
 
     clickedAlbums.forEach(clickedAlbum =>{
 
         let bgImage = clickedAlbum.querySelector('img');
+        
         //aggiungo un evento che faccia ricomparire l'overlay
         clickedAlbum.addEventListener('click', ()=> {
             clickedAlbum.classList.add('disappear');
             overlay.classList.remove('disappear');
             overlay.innerHTML = `
-                <img src="${bgImage}" alt="">
+                <img src="${bgImage.src}" alt="">
                 <button>Close</button>
             `
+            //richiamo il bottone
+            const button = document.querySelector('button');
 
+            //aggiungo un evento al bottone che riaggiunga la classe disappear all'overlay
+            button.addEventListener('click', ()=>{
+                overlay.classList.add('disappear');
+                clickedAlbum.classList.remove('disappear');
+            });
         });
 
-        //richiamo il bottone
-        const button = document.querySelector('button');
-
-        //aggiungo un evento al bottone che riaggiunga la classe disappear all'overlay
-        button.addEventListener('click', ()=>{
-            overlay.classList.add('disappear');
-            clickedAlbum.classList.remove('disappear');
-        });
+        
     })
 
 
