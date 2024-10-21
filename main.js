@@ -48,34 +48,35 @@ albumsRowEl.forEach(album => {
             </div>
         </div>
     </div>
-        `
+    `
     
     //inserisco il markup nell'HTML
     albumsRow.innerHTML += markup
 
-    //aggiungo un evento che faccia ricomparire l'overlay
-    albumsRow.addEventListener('click', ()=> {
-        overlay.classList.remove('disappear');
-        
-        let image;
-
-        if (image === albumsRowEl) {
-            //inserisco il markup dell'overlay nell'HTML
-            overlay.innerHTML = `
-            <img src="${url}" alt="">
-            <button>Close</button>
-            `
-        }
-    });
-
-    //richiamo il bottone
-    const button = document.querySelector('button');
-
-    //aggiungo un evento al bottone che riaggiunga la classe disappear all'overlay
-    button.addEventListener('click', ()=>{
-        overlay.classList.add('disappear');
-    });
     
+    
+});
+
+let image = albumsRow.querySelector('.album-img img');
+
+//aggiungo un evento che faccia ricomparire l'overlay
+image.addEventListener('click', ()=> {
+    overlay.classList.remove('disappear');
+    //inserisco il markup dell'overlay nell'HTML
+    overlay.innerHTML = `
+        <img src="${image}" alt="">
+        <button>Close</button>
+    `
+
+});
+
+
+//richiamo il bottone
+const button = document.querySelector('button');
+
+//aggiungo un evento al bottone che riaggiunga la classe disappear all'overlay
+button.addEventListener('click', ()=>{
+    overlay.classList.add('disappear');
 });
 
 
